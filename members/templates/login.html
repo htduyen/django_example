@@ -1,0 +1,15 @@
+{% extends "master.html" %} {% block title %} All my member 2 {% endblock %}
+{%block content %}
+<p>This is my first app</p>
+<p><a href="/">HOME</a></p>
+<h1>Members</h1>
+<ul>
+  {%for member in mymembers%}
+  <li>
+    <a href="details/{{ member.id }}"
+      >{{ member.firstname }} {{ member.lastname }}</a
+    >
+  </li>
+  {%endfor%}
+</ul>
+{% endblock %}
